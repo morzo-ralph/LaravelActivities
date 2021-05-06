@@ -10,11 +10,15 @@
                     @if (Auth::check())
                     <a href="/posts/{{$post->id}}/edit" class="btn btn-warning"> Edit </a> 
                     <br>
-                    @else
                     @endif
                         Title: {{ $post->title }} <br>
                         Description: {{ $post->description }} <br>
-                        Created At: {{ $post->created_at }}                    
+                        Created At: {{ $post->created_at }}
+
+                        @if ($post->img)
+                        Post Image: <br><br>
+                        <img src="{{ asset('/storage/img/'.$post->img)}} "> 
+                        @endif                 
                 </div>
             </div>
         </div>

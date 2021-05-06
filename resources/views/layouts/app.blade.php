@@ -36,7 +36,7 @@
                     <ul class="navbar-nav mr-auto">
                         @auth
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('users') }}">Users</a>
+                            <a class="nav-link" href="/posts">Post</a>
                         </li>
                         @endauth
 
